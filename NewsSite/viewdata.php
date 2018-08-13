@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
+	
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	
 </head>
 <body>
 
@@ -25,8 +28,18 @@
             <li><a href="#">category 3</a></li>
         </ul>
     </div>
+	
+	<div class="sidebar">
+        <li><a href="home.php">Insert Data</a></li>
+        <li><a href="viewdata.php">view Data</a></li>
+        <li><a href="listdata.php">List Data</a></li>
+        <li><a href="#">category 3</a></li>
+        
+</div>
+
 </nav>
-<div class="container">
+<div class="container"  style="margin-left:15%">
+
         <?php
             require 'config.php';
 
@@ -35,13 +48,15 @@
 
             if (mysqli_num_rows($result) > 0)
             {
+				
 
                 while($row = mysqli_fetch_assoc($result))
                 {
-
-						echo "<div class='col-md-4'><div class='panel-group'><div class='panel panel-info'><div class='panel-heading'><b>"."<a href=\"singleview.php?id=$row[id]\" class='text-warning'>".$row['heading']."</a></b> -By Admin at " .$row['datetime']."</div><div class='panel-body'>".$row['summertext'] ."</div></div></div></div>";
+					
+						echo "<div class='gallery'><div class='panel-group'><div class='panel panel-info'><div class='desc'><b>"."<a href=\"singleview.php?id=$row[id]\" class='desc'>".$row['heading']."</a></b> -By Admin at " .$row['datetime']."</div><div class='panel-body'>".$row['summertext'] ."</div></div></div></div>";
 					
                 }
+				
             }
             else
             {

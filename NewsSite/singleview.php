@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
+	
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -27,7 +29,16 @@
         </ul>
     </div>
 </nav>
-<div class="container">
+
+<div class="sidebar">
+        <li><a href="home.php">Insert Data</a></li>
+        <li><a href="viewdata.php">view Data</a></li>
+        <li><a href="listdata.php">List Data</a></li>
+        <li><a href="#">category 3</a></li>
+        
+</div>
+
+<div class="container" style="margin-left:15%">
         <?php
             require 'config.php';
 

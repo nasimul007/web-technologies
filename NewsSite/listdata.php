@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
+	
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -26,7 +28,16 @@
         </ul>
     </div>
 </nav>
-<div class="container">
+
+<div class="sidebar">
+        <li><a href="home.php">Insert Data</a></li>
+        <li><a href="viewdata.php">view Data</a></li>
+        <li><a href="listdata.php">List Data</a></li>
+        <li><a href="#">category 3</a></li>
+        
+</div>
+
+<div class="container" style="margin-left:15%" >
 <h3><a href='convertxml.php' style='float:right;' class='btn btn-info'>Export as Xml</a></h3><br/><br/>
 	<table class="table table-striped table-bordered table-condensed">
 		<tr>

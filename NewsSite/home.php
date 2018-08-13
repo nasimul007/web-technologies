@@ -1,10 +1,10 @@
-<?php
-session_start();
+ <?php
+// session_start();
 
-if (!isset($_SESSION['uname']))
-{header('location:login.php');}
-//else header('location:login.php');
-?>
+// if (!isset($_SESSION['uname']))
+// {header('location:login.php');}
+// //else header('location:login.php');
+// ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,14 +15,16 @@ if (!isset($_SESSION['uname']))
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="summernote.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/sidebar.css" rel="stylesheet">
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="summernote.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
-<body>
 
+<body>
+    
 
 
 <nav class="navbar navbar-default">
@@ -38,7 +40,17 @@ if (!isset($_SESSION['uname']))
         </ul>
     </div>
 </nav>
-<div class="container">
+
+<div class="sidebar">
+        <li><a href="home.php">Insert Data</a></li>
+        <li><a href="viewdata.php">view Data</a></li>
+        <li><a href="listdata.php">List Data</a></li>
+        <li><a href="#">category 3</a></li>
+        
+</div>
+
+
+<div class="container" style="margin-left:15%" >
    <!-- <center><h1> <span class="label label-default">Summernote data formatter</span></h1></center>-->
     <form name="summernote" method="post" action="setdata.php">
 		News Headline:<br/><input type="text" class="form-control" name="heading"/><br/>
@@ -52,4 +64,4 @@ if (!isset($_SESSION['uname']))
     });
 </script>
 </body>
-</html>
+</html>	
